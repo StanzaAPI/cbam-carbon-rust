@@ -1,0 +1,18 @@
+[package]
+name = "stanzaapi-cbam-carbon"
+version = "1.0.0"
+edition = "2021"
+authors = ["Stanza"]
+description = "Official high-speed Rust client for EU CBAM & Carbon Tax Calculation Engine"
+license = "MIT"
+readme = "README.md"
+homepage = "https://stanzaapi.com/tools/cbam-carbon"
+repository = "https://github.com/StanzaAPI/cbam-carbon-rust"
+keywords = ["cbam","carbon-tax","eu-ets","embedded-emissions","scope-1"]
+categories = ["web-programming::http-client", "development-tools::ffi"]
+
+[dependencies]
+reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tokio = { version = "1.0", features = ["macros", "rt-multi-thread"], optional = true }
